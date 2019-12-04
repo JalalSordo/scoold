@@ -115,7 +115,7 @@ public class ReportsController {
 			rep.setDescription("CSP Violation Report");
 			rep.setSubType(Report.ReportType.OTHER);
 			rep.setLink("-");
-			rep.setAuthorName("Scoold");
+			rep.setAuthorName("Sa9si.ma");
 			Map<String, Object> body = ParaObjectUtils.getJsonReader(Map.class).readValue(req.getInputStream());
 			if (body != null && !body.isEmpty()) {
 				rep.setProperties((Map<String, Object>) (body.containsKey("csp-report") ? body.get("csp-report") : body));
