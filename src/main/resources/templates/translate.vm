@@ -23,7 +23,12 @@
 				<div class="col m4">
 					<a href="$translatelink/$showLocale/$!previ" title="Previous"><i class="fa fa-arrow-left"></i> $!lang.get("prev")</a>
 				</div>
-				
+				<div class="col m4 center">
+					<span class="chip">$indx / $!lang.size()</span>
+				</div>
+				<div class="col m4 r">
+					<a href="$translatelink/$showLocale/$!nexti" title="Next">$!lang.get("next") <i class="fa fa-arrow-right"></i></a>
+				</div>
 			</div>
 
 			#set($langkey = $!langkeys.get($showIndex))
