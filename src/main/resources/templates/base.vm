@@ -20,11 +20,6 @@
 		<meta property="og:url" content="$!request.getRequestURL()">
 		<meta property="og:image" content="$!ogimage">
 		<meta property="og:description" content="$!description">
-		<meta name="twitter:card" content="summary">
-		<meta name="twitter:site" content="@getscoold">
-		<meta name="twitter:title" content="$!APPNAME | $!title">
-		<meta name="twitter:description" content="$!description">
-		<meta name="twitter:image" content="$!ogimage">
 		<link href="$!request.contextPath/opensearch.xml" title="$!APPNAME" type="application/opensearchdescription+xml" rel="search">
 		<link href="$!request.contextPath/feed.xml" rel="alternate" type="application/atom+xml" title="New questions feed">
 		<link href="$!imageslink/logowhite.png" rel="image_src">
