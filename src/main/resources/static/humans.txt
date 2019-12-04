@@ -1,37 +1,19 @@
-                                    ._      ._
-       ____   ____   ___    ___    / / ____/ /
-     / ___/ / ___/ / __ \ / __ \  / / / __  /
-    (__  ) / /__  / /_/ // /_/ / / / / /_/ /
-   /____/  \___/  \____/ \____/ /_/  \__,_/
+Sa9si.ma
 
 
 /* TEAM */
 
+   Owner: Jalal Sordo
+   Contact: contact [at] sa9si.ma
    Creator: Alex Bogdanovski
-   Contact: alex [at] erudika.com
-   Twitter: @albogdano
 
-/* THANKS */
-
-   Inspiration & Help: StackOverflow
-   Site: http://www.stackoverflow.com
-
-   Logo design: Dimo Trifonov
-   Twitter: @denull
 
 /* SITE */
 
-   Last update: 2017/02/03
+   Last update: 2019/12/04
    Backend: Para - https://paraio.com
    Standards: HTML5, CSS3, OpenSearch, RSS
    Components: ParaIO.com, JS, CSS, HTML5 (clientside), Java (serverside)
    Software: Apache Click, Amazon DynamoDB, Elasticsearch, Heroku, jQuery
    Fonts: FontAwesome
 
-
-    ___________
-   |.--.   .--.|
-   | || |-| () |
-   |`--'   `--'|
-   |    ___    |
-   \___________/

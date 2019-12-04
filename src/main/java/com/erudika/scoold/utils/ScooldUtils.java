@@ -132,12 +132,12 @@ public final class ScooldUtils {
 	}
 
 	static {
-		// multiple domains/admins are now allowed only in Scoold PRO
+		// multiple domains/admins are now allowed only in Sa9si.ma PRO
 		String approvedDomains = Config.getConfigParam("approved_domains_for_signups", "");
 		if (!StringUtils.isBlank(approvedDomains)) {
 			APPROVED_DOMAINS.add(approvedDomains);
 		}
-		// multiple admins are now allowed only in Scoold PRO
+		// multiple admins are now allowed only in Sa9si.ma PRO
 		String admins = Config.getConfigParam("admins", "");
 		if (!StringUtils.isBlank(admins)) {
 			ADMINS.add(admins);
@@ -291,7 +291,7 @@ public final class ScooldUtils {
 			String subject = Utils.formatMessage(lang.get("signin.welcome"), Config.APP_NAME);
 			String body1 = Utils.formatMessage(lang.get("signin.welcome.body1"), Config.APP_NAME)  + "<br><br>";
 			String body2 = lang.get("signin.welcome.body2") + "<br><br>";
-			String body3 = "Best, <br>The Scoold team";
+			String body3 = "Best, <br>Sa9si.ma team";
 
 			if (verifyEmail && !user.getActive() && !StringUtils.isBlank(user.getIdentifier())) {
 				Sysprop s = pc.read(user.getIdentifier());
@@ -301,11 +301,11 @@ public final class ScooldUtils {
 					pc.update(s);
 					token = getServerURL() + CONTEXT_PATH + SIGNINLINK + "/register?id=" + user.getId() + "&token=" + token;
 					body3 = "<b><a href=\"" + token + "\">" + lang.get("signin.welcome.verify") + "</a></b><br><br>";
-					body3 += "Best, <br>The Scoold team<br><br>";
+					body3 += "Best, <br>The Sa9si.ma team<br><br>";
 				}
 			}
 
-			model.put("logourl", Config.getConfigParam("small_logo_url", "https://scoold.com/logo.png"));
+			model.put("logourl", Config.getConfigParam("small_logo_url", "https://www.sa9si.ma/images/logo.png"));
 			model.put("heading", Utils.formatMessage(lang.get("signin.welcome.title"), user.getName()));
 			model.put("body", body1 + body2 + body3);
 			emailer.sendEmail(Arrays.asList(user.getEmail()), subject,
@@ -321,9 +321,9 @@ public final class ScooldUtils {
 			String subject = lang.get("iforgot.title");
 			String body1 = "Open the link below to change your password:<br><br>";
 			String body2 = Utils.formatMessage("<b><a href=\"{0}\">RESET PASSWORD</a></b><br><br>", url);
-			String body3 = "Best, <br>The Scoold team<br><br>";
+			String body3 = "Best, <br>The Sa9si.ma team<br><br>";
 
-			model.put("logourl", Config.getConfigParam("small_logo_url", "https://scoold.com/logo.png"));
+			model.put("logourl", Config.getConfigParam("small_logo_url", "https://www.sa9si.ma/images/logo-google.png"));
 			model.put("heading", lang.get("hello"));
 			model.put("body", body1 + body2 + body3);
 			emailer.sendEmail(Arrays.asList(email), subject, Utils.compileMustache(model, loadEmailTemplate("notify")));
@@ -418,7 +418,7 @@ public final class ScooldUtils {
 			String body = Utils.markdownToHtml(question.getBody());
 			String picture = Utils.formatMessage("<img src='{0}' width='25'>", postAuthor.getPicture());
 			String postURL = getServerURL() + question.getPostLink(false, false);
-			model.put("logourl", Config.getConfigParam("small_logo_url", "https://scoold.com/logo.png"));
+			model.put("logourl", Config.getConfigParam("small_logo_url", "https://www.sa9si.ma/images/logo.png"));
 			model.put("heading", Utils.formatMessage("{0} {1} posted:", picture, name));
 			model.put("body", Utils.formatMessage("<h2><a href='{0}'>{1}</a></h2><div>{2}</div>",
 					postURL, question.getTitle(), body));
@@ -450,7 +450,7 @@ public final class ScooldUtils {
 			String body = Utils.markdownToHtml(reply.getBody());
 			String picture = Utils.formatMessage("<img src='{0}' width='25'>", replyAuthor.getPicture());
 			String postURL = getServerURL() + parentPost.getPostLink(false, false);
-			model.put("logourl", Config.getConfigParam("small_logo_url", "https://scoold.com/logo.png"));
+			model.put("logourl", Config.getConfigParam("small_logo_url", "https://www.sa9si.ma/images/logo.png"));
 			model.put("heading", Utils.formatMessage("New reply to <a href='{0}'>{1}</a>", postURL, parentPost.getTitle()));
 			model.put("body", Utils.formatMessage("<h2>{0} {1}:</h2><div>{2}</div>", picture, name, body));
 
@@ -1003,7 +1003,7 @@ public final class ScooldUtils {
 				+ "base-uri 'self'; "
 				+ "form-action 'self'; "
 				+ "connect-src 'self' " + (Config.IN_PRODUCTION ? getServerURL() : "")
-				+ " scoold.com www.google-analytics.com www.googletagmanager.com " + Config.getConfigParam("csp_connect_sources", "") + "; "
+				+ " www.sa9si.ma www.google-analytics.com www.googletagmanager.com " + Config.getConfigParam("csp_connect_sources", "") + "; "
 				+ "frame-src 'self' accounts.google.com staticxx.facebook.com " + Config.getConfigParam("csp_frame_sources", "") + "; "
 				+ "font-src 'self' cdnjs.cloudflare.com fonts.gstatic.com fonts.googleapis.com " + Config.getConfigParam("csp_font_sources", "") + "; "
 				+ "style-src 'self' 'unsafe-inline' fonts.googleapis.com cdnjs.cloudflare.com unpkg.com "

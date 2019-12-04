@@ -154,7 +154,7 @@ public class CommentController {
 					String body = Utils.markdownToHtml(comment.getComment());
 					String pic = Utils.formatMessage("<img src='{0}' width='25'>", commentAuthor.getPicture());
 					String postURL = getServerURL() + parentPost.getPostLink(false, false);
-					model.put("logourl", Config.getConfigParam("small_logo_url", "https://scoold.com/logo.png"));
+					model.put("logourl", Config.getConfigParam("small_logo_url", "https://www.sa9si.ma/images/logo.png"));
 					model.put("heading", Utils.formatMessage("New comment on <a href='{0}'>{1}</a>", postURL, parentPost.getTitle()));
 					model.put("body", Utils.formatMessage("<h2>{0} {1}:</h2><div class='panel'>{2}</div>", pic, name, body));
 					emailer.sendEmail(Arrays.asList(author.getEmail()), name + " commented on your post",

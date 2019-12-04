@@ -1,12 +1,12 @@
 {
   "openapi": "3.0.2",
   "info": {
-    "description": "This is the API of [Scoold](https://scoold.com). You need to generate a [JWT super token](http://paraio.org/docs/#creating-super-tokens) from your Para secret key to access the API.",
+    "description": "This is the API of [Scoold](https://sa9si.ma). You need to generate a [JWT super token](http://paraio.org/docs/#creating-super-tokens) from your Para secret key to access the API.",
     "version": "1.0.0",
     "title": "Scoold API",
-    "termsOfService": "https://live.scoold.com/terms",
+    "termsOfService": "https://www.sa9si.ma/terms",
     "contact": {
-      "email": "support@scoold.com"
+      "email": "support@sa9si.ma"
     },
     "license": {
       "name": "Apache 2.0",
